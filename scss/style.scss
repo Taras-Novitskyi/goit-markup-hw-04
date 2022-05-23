@@ -149,16 +149,16 @@ h1,h2,h3,h4,h5,h6{
 // -------------social-icon----------------
 .social-icon{
 	display: inline-block;
-		padding: 12px;
-		width: 44px;
-		height: 44px;
-		border-radius: 50%;
-		color: var(--color-svg-icon);
+	padding: 12px;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	color: var(--color-svg-icon);
 
-		&:hover, &:focus{
-			background-color: var(--main-color);
-			color: var(--color-main-light);
-		}
+	&:hover, &:focus{
+		background-color: var(--main-color);
+		color: var(--color-main-light);
+	}
 }
 
 // ============================================
@@ -247,12 +247,14 @@ h1,h2,h3,h4,h5,h6{
 .hero {
 	text-align: center;
 	padding: 200px 0;
+	max-width: 1600px;
+	margin: 0 auto;
 
-	background-image: url('../img/webstudio/hero/bgoverlay.png'), url('../img/webstudio/hero/bg.jpg');
+	background-color: var(--color-bg-dark);
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url('../img/webstudio/hero/bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	background-color: rgba(47, 48, 58, 0.4), none;
 	
 	&__container{
 		padding: 0 250px;
@@ -395,6 +397,38 @@ h1,h2,h3,h4,h5,h6{
 	}
 }
 
+// ----------- section clients ---------
+.clients {
+
+	&__title {
+	}
+	&__list {
+		display: flex;
+	}
+	&__logo {
+		width: calc((100% - 150px) / 6);
+		&:not(:last-child){
+			margin-right: 30px;
+		}
+	}
+	&__icon-link {
+		// width: 170px;
+		// height: 92px;
+		padding: 16px 32px;
+		display: inline-block;
+		border: 1px solid var(--color-svg-icon);
+		border-radius: 4px;
+
+		color: var(--color-svg-icon);
+		&:hover, &:focus{
+			color: var(--main-color);
+		}
+	}
+	&__icon {
+		fill: currentColor;
+	}
+}
+
 
 // -----------footer -----------
 .footer{
@@ -493,6 +527,10 @@ h1,h2,h3,h4,h5,h6{
 
 // ----------- portfolio cards -----------
 .element-portfolio {
+
+	&:hover{
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+	}
 
 	&__card{
 		display: block;
