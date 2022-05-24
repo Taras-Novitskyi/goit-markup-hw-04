@@ -414,14 +414,15 @@ h1,h2,h3,h4,h5,h6{
 	&__icon-link {
 		// width: 170px;
 		// height: 92px;
-		padding: 16px 32px;
 		display: inline-block;
+		padding: 16px 32px;
 		border: 1px solid var(--color-svg-icon);
 		border-radius: 4px;
 
 		color: var(--color-svg-icon);
 		&:hover, &:focus{
 			color: var(--main-color);
+			border: 1px solid var(--main-color);
 		}
 	}
 	&__icon {
@@ -528,12 +529,11 @@ h1,h2,h3,h4,h5,h6{
 // ----------- portfolio cards -----------
 .element-portfolio {
 
-	&:hover{
-		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-	}
-
 	&__card{
 		display: block;
+		&:hover{
+			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+		}
 	}
 	&__img {
 		& img{
